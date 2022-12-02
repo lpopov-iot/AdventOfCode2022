@@ -73,7 +73,6 @@ namespace AdventOfCode
                 var neededResult = outcome[^1];
                 var playA = outcome[0];
 
-                // draw
                 if (neededResult == 'Y')
                 {
                     var playB = _draws[playA];
@@ -81,14 +80,12 @@ namespace AdventOfCode
                     totalScore += 3;
                 }
 
-                // lose
                 if (neededResult == 'X')
                 {
                     var playB = _losses[playA];
                     totalScore += _scores[playB];
                 }
 
-                // wins
                 if (neededResult == 'Z')
                 {
                     var playB = _wins[playA];
