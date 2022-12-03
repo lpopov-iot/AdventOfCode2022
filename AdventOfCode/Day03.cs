@@ -24,7 +24,8 @@ namespace AdventOfCode
 
                 var dupe = compartment1.Intersect(compartment2).First();
 
-                sum += dupe - (dupe > 96 ? 96 : 38);            }
+                sum += dupe - (dupe > 96 ? 96 : 38);
+            }
 
             return new($"{sum}");
         }
