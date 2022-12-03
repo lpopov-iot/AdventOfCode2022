@@ -33,11 +33,7 @@ namespace AdventOfCode
         {
             var sum = 0;
 
-            var chunks = _input
-                .Select((x, i) => (i, x))
-                .GroupBy(x => x.i / 3)
-                .Select(x => x.Select(v => v.x).ToList())
-                .ToList();
+            var chunks = _input.Chunk(3);
 
             foreach (var chunk in chunks)
             {
